@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W3ndig0 — Fullstack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-spotlight" id="spotlight"></div>
+
+<nav class="tabbar" aria-label="Sektioner">
+  <div class="tabbar-inner">
+    <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+    <button class="tab active" type="button" data-target="home"><span class="dot">●</span>home.tsx</button>
+    <button class="tab" type="button" data-target="about"><span class="dot">○</span>about.tsx</button>
+    <button class="tab" type="button" data-target="projects"><span class="dot">○</span>projects.tsx</button>
+    <button class="tab" type="button" data-target="repos"><span class="dot">○</span>repos.json</button>
+    <button class="tab" type="button" data-target="contact"><span class="dot">○</span>contact.tsx</button>
+    <button class="cmdk-trigger" id="cmdk-trigger" type="button">⌘ Sök <kbd>⌘K</kbd></button>
+  </div>
+</nav>
+
+<div class="shell">
+
+  <main class="main">
+    <section class="hero" id="home">
+      <div class="terminal">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <div class="terminal-title">zsh — w3ndig0u0@portfolio</div>
+        </div>
+        <div class="terminal-body">
+          <div><span class="prompt">guest@portfolio</span><span class="cmd">:~$ </span><span id="typed-cmd"></span></div>
+          <div class="terminal-output">
+            <div class="hero-top">
+              <div class="avatar-ph">PROFIL-<br>BILD</div>
+              <div>
+                <h1 id="hero-name">Jingxiang<span class="glitch-layer" aria-hidden="true">Jingxiang</span></h1>
+                <div class="role">Fullstack-utvecklare · React · Spring Boot · .NET</div>
+                <p class="desc">Bygger fullstack-applikationer från databas till gränssnitt — allt från ruttmotorer för gränsöverskridande betalningar till spårningsappar för spel och hälsa. Nyfiken på AI, blockkedjeteknik och tillgänglig design.</p>
+              </div>
+            </div>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">Se projekt →</a>
+              <a class="btn btn-ghost" href="https://github.com/W3ndig0u0" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a class="btn btn-ghost" href="#contact">Kontakt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <h2>Om mig</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Jag är en <strong>fullstack-utvecklare</strong> som trivs i hela stacken — från att designa databasscheman och API:er till att bygga gränssnitt som känns genomtänkta och snabba. Mina sidoprojekt spänner över fintech, gaming, AI och tillgänglighet, ofta drivna av nyfikenhet snarare än en specifik brief.</p>
+          <p>Jag gillar att bygga saker som löser ett konkret problem: en motor som jämför betalningsvägar i realtid, en spårare för över 350 000 spel, eller en träningsapp byggd specifikt för seniorer. Just nu utforskar jag agentiska arbetsflöden och hur LLM:er kan dirigera uppgifter till specialiserade modeller.</p>
+        </div>
+        <div class="stack-card reveal">
+          <div class="file-line">stack.config.json</div>
+          <div class="stack-tags">
+            <span>React</span><span>TypeScript</span><span>Spring Boot</span>
+            <span>C#</span><span>.NET</span><span>PostgreSQL</span>
+            <span>Java</span><span>JavaScript</span><span>Python</span>
+            <span>Web3 / Ethereum</span><span>AngularJS</span><span>REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <h2>Sidoprojekt</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-img-ph">SKÄRMDUMP-PLACEHOLDER · cashdash.png</div>
+          <div class="project-body">
+            <div class="pf-name">cashdash.tsx</div>
+            <h3><a href="https://cashdash-5r6.pages.dev/" target="_blank" rel="noopener noreferrer">CashDash</a></h3>
+            <p>Högpresterande ruttmotor för gränsöverskridande överföringar. Jämför transaktionsavgifter och processhastigheter i realtid över sex Web3-blockkedjor, fintech (Wise) och traditionell SWIFT-bankning.</p>
+            <div class="project-links">
+              <a href="https://cashdash-5r6.pages.dev/" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+              <a href="https://github.com/W3ndig0u0/CashDash" target="_blank" rel="noopener noreferrer">Källkod ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-ph">SKÄRMDUMP-PLACEHOLDER · game-tracker.png</div>
+          <div class="project-body">
+            <div class="pf-name">game-tracker.tsx</div>
+            <h3><a href="https://gamebacklog-tracker.pages.dev/" target="_blank" rel="noopener noreferrer">Game Tracker</a></h3>
+            <p>Fullstack-plattform för spel med över 350 000 titlar via IGDB. Spåra spelframsteg, hantera ditt bibliotek och lämna sociala recensioner i ett Netflix-likt gränssnitt.</p>
+            <div class="project-links">
+              <a href="https://gamebacklog-tracker.pages.dev/" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+              <a href="https://github.com/W3ndig0u0/GameBacklog-Tracker" target="_blank" rel="noopener noreferrer">Källkod ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-ph">SKÄRMDUMP-PLACEHOLDER · ai-image-gen.png</div>
+          <div class="project-body">
+            <div class="pf-name">ai-image-gen.tsx</div>
+            <h3><a href="https://github.com/W3ndig0u0/AiArtGeneration" target="_blank" rel="noopener noreferrer">AI Image Generator</a></h3>
+            <p>Webapp som använder en LLM för att dirigera användarpromptar till specialiserade Hugging Face-modeller, optimerat för lokal GPU-bildgenerering.</p>
+            <div class="project-links">
+              <a href="https://github.com/W3ndig0u0/AiArtGeneration" target="_blank" rel="noopener noreferrer">Källkod ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-ph">SKÄRMDUMP-PLACEHOLDER · elsa.png</div>
+          <div class="project-body">
+            <div class="pf-name">elsa.tsx</div>
+            <h3><a href="https://gamebacklog-tracker.pages.dev/" target="_blank" rel="noopener noreferrer">ELSA — Training App</a></h3>
+            <p>Tillgänglighetsanpassad hälso- och träningsapplikation med intuitivt UI/UX, skräddarsydd för seniorer med ett agentiskt arbetsflöde.</p>
+            <div class="project-links">
+              <a href="https://gamebacklog-tracker.pages.dev/" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="repos">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <h2>GitHub-repos</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="repo-terminal reveal">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <div class="terminal-title">~/W3ndig0u0 — grep --lang</div>
+        </div>
+
+        <div class="repo-filter" id="repo-filter">
+          <span class="filter-prompt">$ filter:</span>
+          <button class="filter-chip active" type="button" data-lang="all">alla</button>
+          <button class="filter-chip" type="button" data-lang="C#"><span class="dot" style="background:#178600"></span>C#</button>
+          <button class="filter-chip" type="button" data-lang="TypeScript"><span class="dot" style="background:#3178c6"></span>TypeScript</button>
+          <button class="filter-chip" type="button" data-lang="JavaScript"><span class="dot" style="background:#e8b339"></span>JavaScript</button>
+          <button class="filter-chip" type="button" data-lang="Java"><span class="dot" style="background:#b07219"></span>Java</button>
+          <button class="filter-chip" type="button" data-lang="Python"><span class="dot" style="background:#3572A5"></span>Python</button>
+          <span class="repo-count" id="repo-count">10 repos</span>
+        </div>
+
+        <div class="repo-list" id="repo-list">
+          <noscript>Aktivera JavaScript för att se mina GitHub-repos.</noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-box reveal">
+        <div class="prompt-line">guest@portfolio:~$ contact --w3ndig0u0</div>
+        <h2>Bygger du något? Hör av dig.</h2>
+        <p>Öppen för fullstack-uppdrag, samarbeten och intressanta projekt.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://github.com/W3ndig0u0" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn btn-ghost" href="mailto:jingxiang304@gmail.com">E-post ↗</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/jingxiang-xu-882324214/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>// w3ndig0u0 — byggd med React, Spring Boot, kaffe och för många browser-tabbar.</footer>
+
+<div class="cmdk-overlay" id="cmdk-overlay" aria-hidden="true">
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Kommando-palette">
+    <div class="cmdk-input-row">
+      <span class="prompt">$</span>
+      <input type="text" id="cmdk-input" placeholder="Skriv ett kommando eller sök..." autocomplete="off">
+    </div>
+    <div class="cmdk-list" id="cmdk-list"></div>
+    <div class="cmdk-footer">
+      <span><kbd>↑↓</kbd>navigera</span>
+      <span><kbd>↵</kbd>välj</span>
+      <span><kbd>esc</kbd>stäng</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
